@@ -1,1 +1,1 @@
-# functionalsolutions
+# Landing page of FS Workshop

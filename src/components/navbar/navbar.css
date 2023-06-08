@@ -1,0 +1,140 @@
+.fs__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 6rem;
+}
+
+.fs__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fs__navbar-links_logo {
+  margin-right: 2rem;
+}
+
+.fs__navbar-links_logo img {
+  width: 62px;
+}
+
+.fs__navbar-links_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.fs__navbar-sign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fs__navbar-links_container p,
+.fs__navbar-sign p,
+.fs__navbar-menu_container p {
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.fs__navbar-sign button,
+.fs__navbar-menu_container button {
+  padding: 0.5rem 1.5rem;
+  color: #ffffff;
+  background: radial-gradient(
+    circle,
+    rgba(74, 144, 172, 1) 47%,
+    rgba(71, 97, 128, 1) 100%
+  );
+  font-family: var(--font-family);
+  font-weight: 500;
+  border-radius: 5px;
+  left: 1153px;
+  top: 55px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.fs__navbar-menu {
+  margin-left: 1rem;
+
+  display: none;
+  position: relative;
+}
+
+.fs__navbar-menu svg {
+  cursor: pointer;
+}
+
+.fs__navbar-menu_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+
+  text-align: end;
+  background: var(--color-footer);
+  padding: 2rem;
+  position: absolute;
+  top: t 40px;
+  right: 0;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+
+.fs__navbar-menu_container p {
+  margin: 1rem 0;
+}
+
+.fs__navbar-menu_container-links-sign {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .fs__navbar-links_container {
+    display: none;
+  }
+
+  .fs__navbar-menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .fs__navbar {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .fs__navbar {
+    padding: 2rem;
+  }
+
+  .fs__navbar-sign {
+    display: none;
+  }
+
+  .fs__navbar-menu_container {
+    top: 20px;
+  }
+
+  .fs__navbar-menu_container-links-sign {
+    display: block;
+  }
+}
