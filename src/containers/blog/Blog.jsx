@@ -58,7 +58,7 @@ export default function Blog() {
   };
 
   return (
-    <div className="fs__blog section__padding" id="blog">
+    <div className="fs__blog section__padding" id="profesionales">
       <div className="fs__blog-heading">
         <h1 className="gradient__text">Nuestros profesionales</h1>
       </div>

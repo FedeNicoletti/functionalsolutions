@@ -12,9 +12,11 @@ export default function Navbar() {
       <p>
         <a href="#aboutus">Sobre nosotros</a>
       </p>
-
       <p>
         <a href="#features">¿Qué ofrecemos?</a>
+      </p>
+      <p>
+        <a href="#profesionales">Nuestros profesionales</a>
       </p>
     </>
   );
