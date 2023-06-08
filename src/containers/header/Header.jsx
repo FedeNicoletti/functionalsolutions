@@ -20,9 +20,6 @@ export default function Header() {
           <input type="email" placeholder="Ingresa tu email..." />
           <button type="button">Anotarme</button>
         </div>
-        <div className="fs__header-content__people">
-          <p>Decenas de personas ya probaron el Workshop!</p>
-        </div>
       </div>
       <div className="fs__header-image">
         <img src={stress} alt="ai" />

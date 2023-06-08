@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Footer, Features, AboutUs, Header } from "./containers";
-import { CTA, Navbar } from "./components";
+import { CTA, Navbar, Brand } from "./components";
 export default function App() {
   return (
     <div className="App">
@@ -9,7 +9,7 @@ export default function App() {
         <Navbar />
         <Header />
       </div>
-
+      <Brand />
       <AboutUs />
       <Features />
       <CTA />
