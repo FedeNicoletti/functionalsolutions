@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Footer, Features, AboutUs, Header } from "./containers";
+import { Footer, Features, AboutUs, Header, Blog } from "./containers";
 import { CTA, Navbar, Brand } from "./components";
 export default function App() {
   return (
@@ -13,6 +13,7 @@ export default function App() {
       <AboutUs />
       <Features />
       <CTA />
+      <Blog />
       <Footer />
     </div>
   );
