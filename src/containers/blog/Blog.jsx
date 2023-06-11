@@ -1,23 +1,9 @@
 import React from "react";
 import "./blog.css";
-import { prueba, santiagoprueba, santiago, juanpablo } from "./imports.js";
+import { santiago, pruebajuanpablo } from "./imports.js";
 
 export default function Blog() {
   const professionals = [
-    {
-      id: "santiagop",
-      imgUrl: santiagoprueba,
-      name: "Santiago Robetto",
-      title:
-        "Fisioterapeuta y Osteópata\nCertificación Functional Movement Screen nivel 1 y 2.\nFormación en Diagnóstico y Terapia Mecánica (Método Mckenzie).\nFormación en concepto Mulligan.",
-    },
-    {
-      id: "jprueba",
-      imgUrl: prueba,
-      name: "Juan Pablo Mussini",
-      title:
-        "Licenciado en Kinesiología\nPostgrado en Kinesiología del Deporte.\nStaff Médico del Equipo Paralímpico Argentino.",
-    },
     {
       id: "santiago",
       imgUrl: santiago,
@@ -27,7 +13,7 @@ export default function Blog() {
     },
     {
       id: "juanpablo",
-      imgUrl: juanpablo,
+      imgUrl: pruebajuanpablo,
       name: "Juan Pablo Mussini",
       title:
         "Licenciado en Kinesiología\nPostgrado en Kinesiología del Deporte.\nStaff Médico del Equipo Paralímpico Argentino.",
@@ -52,7 +38,12 @@ export default function Blog() {
                 {professional.name}
               </div>
               <p className="fs__blog-container_card-title">
-                {professional.title}
+                {professional.title.split("\n").map((sentence, index) => (
+                  <React.Fragment key={index}>
+                    {sentence}
+                    <br />
+                  </React.Fragment>
+                ))}
               </p>
             </div>
           </div>

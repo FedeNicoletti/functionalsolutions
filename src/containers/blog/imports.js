@@ -1,6 +1,4 @@
 import santiago from "../../assets/santiago.jpeg";
-import juanpablo from "../../assets/juanpablo.jpeg";
-import prueba from "../../assets/prueba.png";
-import santiagoprueba from "../../assets/santiagoprueba.png";
+import pruebajuanpablo from "../../assets/pruebajuanpablo.jpeg";
 
-export { santiago, juanpablo, prueba, santiagoprueba };
+export { santiago, pruebajuanpablo };

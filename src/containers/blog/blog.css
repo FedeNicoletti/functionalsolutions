@@ -10,10 +10,11 @@
 }
 
 .fs__blog-heading h1 {
-  font-size: 62px;
-  line-height: 75px;
-  font-family: var(--font-family);
+  font-size: 34px;
+  line-height: 45px;
   font-weight: 800;
+  font-family: var(--font-family);
+  max-width: 510px;
 }
 
 .fs__blog-container {
@@ -48,9 +49,10 @@
 }
 
 .fs__blog-container_card-title {
-  text-align: start;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
   color: var(--color-text);
 }
 

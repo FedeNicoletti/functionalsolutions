@@ -1,24 +1,8 @@
 import React, { useState } from "react";
 import "./header.css";
 import stress from "../../assets/stress.png";
-import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  serverTimestamp,
-} from "firebase/firestore";
-
-const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  // Agrega aquí otras opciones de configuración si es necesario
-};
-
-initializeApp(firebaseConfig);
-
-const db = getFirestore();
+import { db } from "../../firebase";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 export default function Header() {
   const [email, setEmail] = useState("");
@@ -45,7 +29,7 @@ export default function Header() {
       setSubmitting(true);
 
       // Agregar el nuevo documento a la colección "suscribers"
-      await addDoc(collection(db, "suscribers"), {
+      await addDoc(collection(db, "emails"), {
         email: email,
         timestamp: serverTimestamp(),
       });
