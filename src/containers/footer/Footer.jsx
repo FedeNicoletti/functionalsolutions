@@ -19,6 +19,7 @@ const Footer = () => (
     <div className="fs__footer-links">
       <div className="fs__footer-links_logo">
         <img src={logo} alt="fs_logo" />
+        <p>Functional Solutions</p>
         <p>
           Argentina, Buenos Aires <br /> Todos los derechos reservados
         </p>

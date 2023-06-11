@@ -1,6 +1,6 @@
 import santiago from "../../assets/santiago.jpeg";
-import valentina from "../../assets/valentina.jpg";
-import nicolas from "../../assets/nicolas.jpg";
-import ezequiel from "../../assets/ezequiel.jpg";
-import franco from "../../assets/franco.jpeg";
-export { santiago, valentina, nicolas, ezequiel, franco };
+import juanpablo from "../../assets/juanpablo.jpeg";
+import prueba from "../../assets/prueba.png";
+import santiagoprueba from "../../assets/santiagoprueba.png";
+
+export { santiago, juanpablo, prueba, santiagoprueba };

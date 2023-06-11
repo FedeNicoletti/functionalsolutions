@@ -1,13 +1,29 @@
 import React, { useState } from "react";
-import mailchimp from "mailchimp-api-v3";
 import "./header.css";
 import stress from "../../assets/stress.png";
-import dotenv from "dotenv";
-dotenv.config();
+import { initializeApp } from "firebase/app";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  // Agrega aquí otras opciones de configuración si es necesario
+};
+
+initializeApp(firebaseConfig);
+
+const db = getFirestore();
 
 export default function Header() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -26,25 +42,24 @@ export default function Header() {
     }
 
     try {
-      const apiKey = process.env.APIKEY_MAILCHIMP;
-      const listId = process.env.AUDIENCE_ID;
+      setSubmitting(true);
 
-      const mc = new mailchimp(apiKey);
-
-      // Agregar el email a la audiencia de Mailchimp
-      await mc.post(`/lists/${listId}/members`, {
-        email_address: email,
-        status: "subscribed",
+      // Agregar el nuevo documento a la colección "suscribers"
+      await addDoc(collection(db, "suscribers"), {
+        email: email,
+        timestamp: serverTimestamp(),
       });
 
-      console.log("Email guardado exitosamente en Mailchimp.");
+      console.log("Email guardado exitosamente en Firebase.");
       setEmail("");
       setError("");
+      setSubmitting(false);
     } catch (error) {
-      console.error("Error al guardar el email en Mailchimp:", error);
+      console.error("Error al guardar el email en Firebase:", error);
       setError(
         "Hubo un error al guardar el correo electrónico. Por favor, inténtalo de nuevo más tarde."
       );
+      setSubmitting(false);
     }
   };
 
@@ -68,8 +83,8 @@ export default function Header() {
             value={email}
             onChange={handleEmailChange}
           />
-          <button type="button" onClick={handleSubmit}>
-            Anotarme
+          <button type="button" onClick={handleSubmit} disabled={submitting}>
+            {submitting ? "Enviando..." : "Anotarme"}
           </button>
         </div>
         {error && <p className="error">{error}</p>}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Footer, Features, AboutUs, Header, Blog } from "./containers";
-import { CTA, Navbar, Brand } from "./components";
+import { CTA, Navbar } from "./components";
 export default function App() {
   return (
     <div className="App">
@@ -9,7 +9,6 @@ export default function App() {
         <Navbar />
         <Header />
       </div>
-      <Brand />
       <AboutUs />
       <Features />
       <CTA />
