@@ -72,6 +72,7 @@ export default function Header() {
           </button>
         </div>
         {error && <p className="error">{error}</p>}
+        <p>Primera participación ¡GRATUITA!</p>
       </div>
       <div className="fs__header-image">
         <img src={stress} alt="ai" />
