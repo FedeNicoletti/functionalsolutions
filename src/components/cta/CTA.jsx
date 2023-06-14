@@ -7,12 +7,6 @@ const CTA = ({
   esTranslations,
   enTranslations,
 }) => {
-  const toggleLanguage = () => {
-    const newTranslations =
-      translations === esTranslations ? enTranslations : esTranslations;
-    changeLanguage(newTranslations);
-  };
-
   return (
     <div className="fs__cta">
       <div className="fs__cta-content">

@@ -38,11 +38,6 @@ export default function Blog({
         "Athletic Background Calisthenics\nKILO Strength Society Level 2\nMax Strength Certified Coach\nUSA Olympic Weightlifting Level 1 Coach \nDBC Fitness Level 2 Coach:\nProgram Design, Biomechanics, and orthopedic measurements \nFunctional Range Conditioning Certified\nKinstretch Certified\nPrecision Nutrition Level 1\nIdiomas: Español, Inglés.",
     },
   ];
-  const toggleLanguage = () => {
-    const newTranslations =
-      translations === esTranslations ? enTranslations : esTranslations;
-    changeLanguage(newTranslations);
-  };
 
   return (
     <div className="fs__blog section__padding" id="profesionales">

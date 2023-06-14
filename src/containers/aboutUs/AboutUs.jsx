@@ -8,11 +8,6 @@ export default function AboutUs({
   esTranslations,
   enTranslations,
 }) {
-  const toggleLanguage = () => {
-    const newTranslations =
-      translations === esTranslations ? enTranslations : esTranslations;
-    changeLanguage(newTranslations);
-  };
   return (
     <div className="fs__whatfs section__margin" id="aboutus">
       <div className="fs__whatfs-features">

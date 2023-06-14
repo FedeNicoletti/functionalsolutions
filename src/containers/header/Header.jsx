@@ -52,12 +52,6 @@ export default function Header({
     }
   };
 
-  const toggleLanguage = () => {
-    const newTranslations =
-      translations === esTranslations ? enTranslations : esTranslations;
-    changeLanguage(newTranslations);
-  };
-
   return (
     <div className="fs__header section__padding" id="home">
       <div className="fs__header-content">

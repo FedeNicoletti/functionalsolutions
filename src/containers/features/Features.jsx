@@ -26,11 +26,7 @@ export default function Features({
       text: translations.textFeaturesFortalecimiento,
     },
   ];
-  const toggleLanguage = () => {
-    const newTranslations =
-      translations === esTranslations ? enTranslations : esTranslations;
-    changeLanguage(newTranslations);
-  };
+
   return (
     <div className="fs__features section__padding" id="features">
       <div className="fs__features-heading">
