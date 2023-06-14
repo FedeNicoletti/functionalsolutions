@@ -27,6 +27,11 @@ export default function Navbar({
   );
 
   const [toggleMenu, setToggleMenu] = useState(false);
+  const toggleLanguage = () => {
+    const newTranslations =
+      translations === esTranslations ? enTranslations : esTranslations;
+    changeLanguage(newTranslations);
+  };
 
   return (
     <div className="fs__navbar">
