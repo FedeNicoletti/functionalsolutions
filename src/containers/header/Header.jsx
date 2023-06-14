@@ -26,7 +26,7 @@ export default function Header({
 
     const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (!emailRegex.test(email)) {
-      setError("Por favor, ingresa un correo electrónico válido.");
+      setError("Por favor, ingresa un email válido.");
       return;
     }
 
