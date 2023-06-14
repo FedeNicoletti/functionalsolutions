@@ -71,7 +71,15 @@ export default function Header({
           </button>
         </div>
         {error && <p className="error">{error}</p>}
-        <p style={{ fontSize: "30px" }}>{translations.textUnderInputHeader}</p>
+        <p
+          style={{
+            fontSize: "30px",
+            fontWeight: "bolder",
+            marginTop: "2.5rem",
+          }}
+        >
+          {translations.textUnderInputHeader}
+        </p>
       </div>
       <div className="fs__header-image">
         <img src={stress} alt="ai" />

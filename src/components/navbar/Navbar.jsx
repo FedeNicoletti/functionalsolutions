@@ -74,6 +74,9 @@ export default function Navbar({
             <div className="fs__navbar-menu_container-links">
               <Menu />
               <div className="fs__navbar-menu_container-links-sign">
+                <button type="button" onClick={toggleLanguage}>
+                  {translations === esTranslations ? "EN" : "ES"}
+                </button>
                 <p>{translations.signUp}</p>
                 <button type="button">{translations.contactUs}</button>
               </div>
