@@ -4,7 +4,12 @@ import stress from "../../assets/stress.png";
 import { db } from "../../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
-export default function Header() {
+export default function Header({
+  changeLanguage,
+  translations,
+  esTranslations,
+  enTranslations,
+}) {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -47,32 +52,32 @@ export default function Header() {
     }
   };
 
+  const toggleLanguage = () => {
+    const newTranslations =
+      translations === esTranslations ? enTranslations : esTranslations;
+    changeLanguage(newTranslations);
+  };
+
   return (
     <div className="fs__header section__padding" id="home">
       <div className="fs__header-content">
-        <h1 className="gradient__text">
-          ¡Supera el estrés laboral con nuestro workshop de movilidad!
-        </h1>
-        <p>
-          En este evento de 20 minutos, te enseñaremos diversas técnicas para
-          relajarte y liberar tensiones mientras pasas horas frente al monitor.
-          Nuestro objetivo es que logres resultados rápidamente, por lo que
-          nuestro enfoque integral y evaluación intensa garantizan la máxima
-          eficiencia en tu tratamiento.
-        </p>
+        <h1 className="gradient__text">{translations.titleHeader}</h1>
+        <p>{translations.subtitleHeader}</p>
         <div className="fs__header-content__input">
           <input
             type="email"
-            placeholder="Ingresa tu email..."
+            placeholder={translations.inputHeader}
             value={email}
             onChange={handleEmailChange}
           />
           <button type="button" onClick={handleSubmit} disabled={submitting}>
-            {submitting ? "Enviando..." : "Anotarme"}
+            {submitting
+              ? translations.buttonSendingHeader
+              : translations.buttonHeader}
           </button>
         </div>
         {error && <p className="error">{error}</p>}
-        <p>Primera participación ¡GRATUITA!</p>
+        <p style={{ fontSize: "30px" }}>{translations.textUnderInputHeader}</p>
       </div>
       <div className="fs__header-image">
         <img src={stress} alt="ai" />

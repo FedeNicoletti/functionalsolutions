@@ -2,17 +2,20 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import "./footer.css";
 
-const Footer = () => (
+const Footer = ({
+  changeLanguage,
+  translations,
+  esTranslations,
+  enTranslations,
+}) => (
   <div className="fs__footer section__padding">
     <div className="fs__footer-heading">
-      <h1 className="gradient__text">
-        ¿Querés decirle basta al estrés en el trabajo?
-      </h1>
+      <h1 className="gradient__text">{translations.titleFooter}</h1>
     </div>
 
     <div className="fs__footer-btn">
       <p>
-        <a href="#home">Solicitá tu link de acceso</a>
+        <a href="#home">{translations.subtitleFooter}</a>
       </p>
     </div>
 
@@ -21,7 +24,7 @@ const Footer = () => (
         <img src={logo} alt="fs_logo" />
         <p>Functional Solutions</p>
         <p>
-          Argentina, Buenos Aires <br /> Todos los derechos reservados
+          Argentina, Buenos Aires <br /> {translations.rightsFooter}
         </p>
       </div>
       <div className="fs__footer-links_div">
@@ -43,14 +46,14 @@ const Footer = () => (
       </div>
       <div className="fs__footer-links_div">
         <h4>Functional Solutions</h4>
-        <p>Terminos y Condiciones </p>
-        <p>Política de Privacidad</p>
+        <p>{translations.termsAndConditionsFooter}</p>
+        <p>{translations.privacyPolicyFooter}</p>
         <p>
-          <a href="https://wa.me/+5492235223748">Contactanos</a>
+          <a href="https://wa.me/+5492235223748">{translations.contactUs}</a>
         </p>
       </div>
       <div className="fs__footer-links_div">
-        <h4>Contactanos</h4>
+        <h4>{translations.contactUs}</h4>
         <p>Argentina, Buenos Aires</p>
         <p>+54 223 5223748</p>
         <p>telerehabfs@gmail.com</p>
@@ -58,7 +61,7 @@ const Footer = () => (
     </div>
 
     <div className="fs__footer-copyright">
-      <p>@2023 federico-nicoletti. Todos los derechos reservados.</p>
+      <p>@2023 federico-nicoletti. {translations.rightsFooter}</p>
     </div>
   </div>
 );

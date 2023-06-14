@@ -1,7 +1,14 @@
 import React from "react";
 import "./feature.css";
 
-const Feature = ({ title, text }) => (
+const Feature = ({
+  title,
+  text,
+  changeLanguage,
+  translations,
+  esTranslations,
+  enTranslations,
+}) => (
   <div className="fs__features-container__feature">
     <div className="fs__features-container__feature-title">
       <div />
