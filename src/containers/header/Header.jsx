@@ -75,7 +75,7 @@ export default function Header({
           style={{
             fontSize: "30px",
             fontWeight: "bolder",
-            lineHeight: "1.5rem",
+            lineHeight: "3rem",
           }}
         >
           {translations.textUnderInputHeader}
