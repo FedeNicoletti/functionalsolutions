@@ -11,11 +11,16 @@ export default function Header({
   enTranslations,
 }) {
   const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
+  };
+
+  const handlePhoneNumberChange = (event) => {
+    setPhoneNumber(event.target.value);
   };
 
   const handleSubmit = async () => {
@@ -36,11 +41,13 @@ export default function Header({
       // Agregar el nuevo documento a la colección "suscribers"
       await addDoc(collection(db, "emails"), {
         email: email,
+        phoneNumber: phoneNumber,
         timestamp: serverTimestamp(),
       });
 
       console.log("Email guardado exitosamente en Firebase.");
       setEmail("");
+      setPhoneNumber("");
       setError("");
       setSubmitting(false);
     } catch (error) {
@@ -57,12 +64,21 @@ export default function Header({
       <div className="fs__header-content">
         <h1 className="gradient__text">{translations.titleHeader}</h1>
         <p>{translations.subtitleHeader}</p>
-        <div className="fs__header-content__input">
+        <div
+          className="fs__header-content__input"
+          style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+        >
           <input
             type="email"
             placeholder={translations.inputHeader}
             value={email}
             onChange={handleEmailChange}
+          />
+          <input
+            type="tel"
+            placeholder={translations.phoneInputHeader}
+            value={phoneNumber}
+            onChange={handlePhoneNumberChange}
           />
           <button type="button" onClick={handleSubmit} disabled={submitting}>
             {submitting

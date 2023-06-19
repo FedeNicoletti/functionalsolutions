@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
+import espana from "../../assets/espana.png";
+import eeuu from "../../assets/estados-unidos.png";
 
 export default function Navbar({
   changeLanguage,
@@ -44,9 +46,21 @@ export default function Navbar({
         </div>
       </div>
       <div className="fs__navbar-sign">
-        <button type="button" onClick={toggleLanguage}>
-          {translations === esTranslations ? "EN" : "ES"}
-        </button>
+        <button
+          type="button"
+          onClick={toggleLanguage}
+          style={{
+            backgroundImage:
+              translations === esTranslations
+                ? `url(${eeuu})`
+                : `url(${espana})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "contain",
+            width: "30px",
+            height: "30px",
+          }}
+        ></button>
         <p>
           <a href="#home">{translations.signUp}</a>
         </p>

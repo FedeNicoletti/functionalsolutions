@@ -10,6 +10,7 @@ export default {
   subtitleHeader:
     "En este evento de 20 minutos, te enseñaremos diversas técnicas pararelajarte y liberar tensiones mientras pasas horas frente al monitor. Nuestro objetivo es que logres resultados rápidamente, por lo quenuestro enfoque integral y evaluación intensa garantizan la máxima eficiencia en tu tratamiento.",
   inputHeader: "Ingresa tu email...",
+  phoneInputHeader: "Opcional, tu número de teléfono...",
   buttonSendingHeader: "Enviando...",
   buttonHeader: "Anotarme",
   textUnderInputHeader: "Primera participación ¡GRATUITA!",

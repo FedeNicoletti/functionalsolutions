@@ -10,6 +10,7 @@ export default {
   subtitleHeader:
     "In this 20-minute event, we will teach you various techniques to relax and release tension while you spend hours in front of the monitor. Our goal is for you to achieve results quickly, which is why our comprehensive approach and intense evaluation guarantee maximum efficiency in your treatment.",
   inputHeader: "Write your email...",
+  phoneInputHeader: "Optional, write your phone number...",
   buttonSendingHeader: "Sending...",
   buttonHeader: "Sign up!",
   textUnderInputHeader: "First participation for FREE!",
