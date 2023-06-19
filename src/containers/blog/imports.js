@@ -1,6 +1,6 @@
 import santiago from "../../assets/santiago.jpeg";
 import pruebajuanpablo from "../../assets/pruebajuanpablo.jpeg";
-import xander from "../../assets/xander.jpeg";
+import xander from "../../assets/xander.png";
 import guissepe from "../../assets/guissepe.png";
 import italia from "../../assets/italia.png";
 import espana from "../../assets/espana.png";
