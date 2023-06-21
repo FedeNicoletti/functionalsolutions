@@ -39,9 +39,9 @@ export default function Blog({
     {
       id: "guissepeleo",
       imgUrl: guissepe,
-      name: "Guissepe Leo",
+      name: "Giussepe Leo",
       title:
-        "Laureato in Scienze Motorie\nPersonal Trainer certificato ELAV\nFondatore ASD FITHOMELESS\nAl massimo si può aggiungere che ho lavorato per Virgin Active per 3 anni",
+        "Laureato in Scienze Motorie\nPersonal Trainer certificato ELAV\nFondatore ASD FITHOMELESS\nVirgin Active per 3 anni",
       imgFlagUrl3: italia,
       imgFlagUrl2: eeuu,
     },
