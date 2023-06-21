@@ -54,8 +54,8 @@ const Footer = ({
       </div>
       <div className="fs__footer-links_div">
         <h4>{translations.contactUs}</h4>
-        <p>Argentina, Buenos Aires</p>
-        <p>+54 223 5223748</p>
+        <p>Argentina, Buenos Aires | Australia, Sidney</p>
+        <p>+54 223 5223748 | +61 435 044 956 </p>
         <p>telerehabfs@gmail.com</p>
       </div>
     </div>
