@@ -8,7 +8,7 @@ export default {
   contactUs: "Contáctanos",
   titleHeader: "¡Supera el estrés laboral con nuestro workshop de movilidad!",
   subtitleHeader:
-    "En este evento de 20 minutos, te enseñaremos diversas técnicas para relajarte y liberar tensiones mientras pasas horas frente al monitor. Nuestro objetivo es que logres resultados rápidamente, por lo que nuestro enfoque integral y evaluación intensa garantizan la máxima eficiencia en tu tratamiento.",
+    "En este evento de 20 minutos, te enseñaremos diversas técnicas para relajarte y liberar tensiones mientras pasas horas frente al monitor. Nuestro objetivo es que logres resultados rápidamente, por lo que nuestro enfoque, integral y de evaluación intensa garantizan la máxima eficiencia en tu tratamiento.",
   inputHeader: "Ingresa tu email...",
   phoneInputHeader: "Opcional, tu número de teléfono...",
   buttonSendingHeader: "Enviando...",
