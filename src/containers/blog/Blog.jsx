@@ -10,12 +10,7 @@ import {
   eeuu,
 } from "./imports.js";
 
-export default function Blog({
-  changeLanguage,
-  translations,
-  esTranslations,
-  enTranslations,
-}) {
+export default function Blog({ translations }) {
   const professionals = [
     {
       id: "santiago",
