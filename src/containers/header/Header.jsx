@@ -45,13 +45,13 @@ export default function Header({
         timestamp: serverTimestamp(),
       });
 
-      console.log("Email guardado exitosamente en Firebase.");
+      window.location = "https://thankyou.functionalsolutionsonline.com/";
+
       setEmail("");
       setPhoneNumber("");
       setError("");
       setSubmitting(false);
     } catch (error) {
-      console.error("Error al guardar el email en Firebase:", error);
       setError(
         "Hubo un error al guardar el correo electrónico. Por favor, inténtalo de nuevo más tarde."
       );
